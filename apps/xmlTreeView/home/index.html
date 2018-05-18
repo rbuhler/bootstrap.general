@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- > https://www.jstree.com/ < -->
+    <meta charset="UTF-8">
+    <title>Tree View</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+
+</head>
+<body>
+    <h1>JSON Tree View</h1>
+    <div id="tvContainer" class="demo"> </div>
+
+    <!-- include the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <!-- include the minified jstree source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <!-- script for interacting with the tree -->
+    <script>
+        // create an instance when the DOM is ready
+         $('#tvContainer').jstree({
+            'core' : {
+                'data' : [
+                    { "text"  : "root",
+                      "state" : { "opened"  : true },
+                      "children" : [
+                        {   "text"  : "child_1",
+                            "state" : { "opened"  : true },
+                        }
+                      ]
+                    }
+                ]
+            }
+         });
+    </script>
+</body>
+
+</html>
